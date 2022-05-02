@@ -13,14 +13,13 @@ from get_connection import get_connection
 headings = ["Departure", "Station", "Platform", "Transfers","Duration"]
 con_values = []
 
-layout = [  [sg.Text("Start: "), sg.InputText(key="-START-")],
-            [sg.Text("Destination"), sg.InputText(key="-DEST-")],
-            [sg.Text("Starting Time: "), sg.InputText(key="-TIME-")], 
-            [sg.Button("Show Connections")],
+layout = [  [sg.Text("Start: "), sg.InputText(key="-START-", size=(25, 2)), sg.Text("Destination"), sg.InputText(key="-DEST-", size=(25, 2))],
+            [sg.Text("Time: "), sg.InputText(key="-TIME-", size=(25, 2)), sg.Push(), sg.Button("Show Connections")],
             [sg.Table(values=con_values, 
                       headings=headings, 
                       col_widths=[20, 15, 10], 
-                      auto_size_columns=False,
+                      auto_size_columns=False, 
+                      hide_vertical_scroll=True,
                       justification="left", 
                       row_height=35,
                       num_rows=4,
