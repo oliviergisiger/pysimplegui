@@ -1,1 +1,1 @@
-## Learning PySimpleGUI basics with open data api
+## Learning PySimpleGUI basics with open data API
